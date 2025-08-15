@@ -1,0 +1,125 @@
+/* ==== Variables de color ==== */
+:root {
+  --primary: #4a90e2;
+  --primary-light: #d8e9f8;
+  --text-dark: #222;
+  --text-light: #fff;
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: var(--primary-light);
+  color: var(--text-dark);
+}
+
+/* ==== Navbar ==== */
+nav {
+  background-color: var(--primary);
+  padding: 14px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-light);
+  box-shadow: var(--shadow);
+}
+
+.nav-logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #fffa;
+  text-decoration: underline;
+}
+
+/* ==== Contenedor ==== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ==== Chips ==== */
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.chip {
+  background: var(--primary-light);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chip.active {
+  background: var(--primary);
+  color: var(--text-light);
+}
+
+/* ==== Grid de películas ==== */
+.movies-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.movie-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.15s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-2px);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ==== Botones ==== */
+button {
+  background: var(--primary);
+  color: var(--text-light);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1863ba;
+}
+
+/* ==== Formularios ==== */
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
